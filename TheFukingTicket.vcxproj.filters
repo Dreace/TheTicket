@@ -28,23 +28,18 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TheFukingTicket.cpp">
+    <ClCompile Include="pages\main\Fuck.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="TheFukingTicket.h">
+    <QtMoc Include="pages\main\Fuck.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
-    <QtUic Include="TheFukingTicket.ui">
+    <QtUic Include="pages\main\Fuck.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-  </ItemGroup>
-  <ItemGroup>
-    <QtRcc Include="TheFukingTicket.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
   </ItemGroup>
 </Project>
