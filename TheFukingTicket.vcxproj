@@ -51,7 +51,7 @@
   </ImportGroup>
   <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <QtInstall>msvc2017_64</QtInstall>
-    <QtModules>core;gui;widgets</QtModules>
+    <QtModules>core;gui;network;widgets</QtModules>
   </PropertyGroup>
   <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <QtInstall>msvc2017_64</QtInstall>
@@ -92,12 +92,16 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pages\main\Fuck.cpp" />
+    <ClCompile Include="utils\network\network.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="pages\main\Fuck.h" />
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="pages\main\Fuck.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="utils\network\network.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

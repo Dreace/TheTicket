@@ -31,9 +31,15 @@
     <ClCompile Include="pages\main\Fuck.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="utils\network\network.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="pages\main\Fuck.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="utils\network\network.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
