@@ -8,7 +8,7 @@ Fuck::Fuck(QWidget* parent) : QWidget(parent) {
 	QUrlQuery params;
 	params.addQueryItem("uid", "test");
 	params.addQueryItem("password", "123");
-	QJsonDocument doucment = network.post(QUrl("http://127.0.0.1:100/ToiCal"), params);
+	QJsonDocument doucment = network.post(QUrl("http://192.168.137.1:100/ToiCal"), params);
 	if (doucment.isObject()) {
 		QVariantMap result = doucment.toVariant().toMap();
 		qDebug() << result["message"].toString();
