@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>439</width>
-    <height>300</height>
+    <width>481</width>
+    <height>328</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,7 +17,7 @@
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>130</y>
+     <y>120</y>
      <width>51</width>
      <height>30</height>
     </rect>
@@ -36,8 +36,8 @@
    <property name="geometry">
     <rect>
      <x>110</x>
-     <y>130</y>
-     <width>271</width>
+     <y>120</y>
+     <width>301</width>
      <height>29</height>
     </rect>
    </property>
@@ -48,48 +48,10 @@
     </font>
    </property>
   </widget>
-  <widget class="QPushButton" name="exitButton">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>230</y>
-     <width>141</width>
-     <height>32</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>微软雅黑</family>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>退出</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="loginButton">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>230</y>
-     <width>171</width>
-     <height>32</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>微软雅黑</family>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>登录</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>30</x>
      <y>10</y>
      <width>411</width>
      <height>91</height>
@@ -126,7 +88,7 @@
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>180</y>
+     <y>170</y>
      <width>34</width>
      <height>30</height>
     </rect>
@@ -145,8 +107,8 @@
    <property name="geometry">
     <rect>
      <x>111</x>
-     <y>180</y>
-     <width>271</width>
+     <y>170</y>
+     <width>301</width>
      <height>29</height>
     </rect>
    </property>
@@ -157,11 +119,99 @@
     </font>
    </property>
   </widget>
+  <widget class="QLineEdit" name="repeatPasswordInput">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>220</y>
+     <width>301</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QLabel" name="repeatPasswordLabel">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>220</y>
+     <width>71</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>重复密码</string>
+   </property>
+  </widget>
+  <widget class="QSplitter" name="splitter">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>270</y>
+     <width>351</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <widget class="QPushButton" name="exitButton">
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>退出</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="registerButton">
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>去注册</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="loginButton">
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>登录</string>
+    </property>
+   </widget>
+  </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <tabstops>
   <tabstop>uidInput</tabstop>
   <tabstop>passwordInput</tabstop>
+  <tabstop>repeatPasswordInput</tabstop>
   <tabstop>loginButton</tabstop>
   <tabstop>exitButton</tabstop>
  </tabstops>

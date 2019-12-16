@@ -14,7 +14,9 @@ public:
 private:
 	Ui::Login ui;
 	Network network;
+	bool registering = false;
 private slots:
 	void clickLoginButton();
 	void clickExitButton();
+	void clickRegisterButton();
 };
