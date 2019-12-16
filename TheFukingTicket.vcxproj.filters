@@ -28,23 +28,23 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="pages\main\Fuck.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="utils\network\network.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="pages\login\Login.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="pages\main\Fuck.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
     <QtMoc Include="utils\network\network.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="pages\login\Login.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
-    <QtUic Include="pages\main\Fuck.ui">
+    <QtUic Include="pages\login\Login.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
