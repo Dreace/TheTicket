@@ -1,10 +1,10 @@
-#include "pages/main/Fuck.h"
+#include "pages/login/Login.h"
 #include <QtWidgets/QApplication>
 
 int main(int argc, char *argv[])
 {
 	QApplication a(argc, argv);
-	Fuck w;
+	Login w;
 	w.show();
 	return a.exec();
 }
