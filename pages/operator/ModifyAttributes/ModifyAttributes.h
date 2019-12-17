@@ -21,5 +21,5 @@ private slots:
 	void click_cancel_change_btn();
 	void click_confirm_change_btn();
 public slots:
-	void receive_data(QVariantMap);
+	void receive_data(QVariantMap,QString);
 };

@@ -10,8 +10,9 @@ ModifyAttributes::ModifyAttributes(QWidget *parent, QWidget *parentWindows)
     connect(this, SIGNAL(refresh_list()), parentWindows, SLOT(refresh()));
 }
 
-void ModifyAttributes::receive_data(QVariantMap v) {
+void ModifyAttributes::receive_data(QVariantMap v,QString session) {
 	this->v = v;
+	this->session = session;
 	ui.lineEdit->setText(v["showID"].toString().left(5));
 	ui.lineEdit_2->setText(v["showName"].toString());
 	QDateTime showTime = QDateTime::fromTime_t(v["showTimestamp"].toInt());
@@ -25,7 +26,7 @@ void ModifyAttributes::click_confirm_change_btn() {//从输入框获取修改过后的值
 	params.addQueryItem("session", session);
 	params.addQueryItem("show_id", v["showID"].toString());
 	params.addQueryItem("show_name",ui.lineEdit_2->text());
-	params.addQueryItem("show_time",ui.dateTimeEdit->dateTime().toString());
+	params.addQueryItem("show_time",QString::number(ui.dateTimeEdit->dateTime().toTime_t()));
 	params.addQueryItem("show_price",ui.lineEdit_5->text());
 	QJsonDocument doucment = network.post(QString("Operator/ModifyShow"), params);
 	QVariantMap result = doucment.toVariant().toMap();

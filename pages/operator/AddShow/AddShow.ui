@@ -148,6 +148,9 @@
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_4">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>140</x>
@@ -167,7 +170,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>最大行数：</string>
+    <string>座椅行数：</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_7">
@@ -180,7 +183,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>最大列数：</string>
+    <string>座椅列数：</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_5">
@@ -205,6 +208,17 @@
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>lineEdit</tabstop>
+  <tabstop>dateTimeEdit</tabstop>
+  <tabstop>lineEdit_2</tabstop>
+  <tabstop>lineEdit_3</tabstop>
+  <tabstop>lineEdit_4</tabstop>
+  <tabstop>lineEdit_5</tabstop>
+  <tabstop>lineEdit_6</tabstop>
+  <tabstop>pushButton</tabstop>
+  <tabstop>pushButton_2</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

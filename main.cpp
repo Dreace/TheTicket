@@ -1,10 +1,10 @@
 #include "pages/login/Login.h"
 #include <QtWidgets/QApplication>
-#include <ModifyList.h>
+#include "ModifyList.h"
 int main(int argc, char *argv[])
 {
 	QApplication a(argc, argv);
-	ModifyList w;
+	Login w;
 	w.show();
 	return a.exec();
 }

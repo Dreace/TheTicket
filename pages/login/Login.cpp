@@ -1,6 +1,7 @@
 #include "Login.h"
 #include <qmessagebox.h>
 #include "AccountingMain.h"
+#include "ModifyList.h"
 #include <ShowList.h>
 Login::Login(QWidget* parent)
 	: QWidget(parent) {
@@ -82,9 +83,13 @@ void Login::clickLoginButton() {
 					case -1:
 						window = new ShowList();
 						break;
+					case 1:
+						window = new ModifyList();
+						break;
 					case 2:
 						window = new AccountingMain();
 						break;
+
 					default:
 						break;
 				}
@@ -97,6 +102,5 @@ void Login::clickLoginButton() {
 			}
 		}
 	}
-
 }
 Login::~Login() {}
