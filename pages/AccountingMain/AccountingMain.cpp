@@ -1,6 +1,7 @@
 #include "AccountingMain.h"
 #include <qmessagebox.h>
 #include <qvariant.h>
+#include <qtablewidget.h>
 AccountingMain::AccountingMain(QWidget* parent)
 	: QWidget(parent) {
 	ui.setupUi(this);
