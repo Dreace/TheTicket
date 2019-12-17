@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AccountingMain</class>
+ <widget class="QWidget" name="AccountingMain">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1005</width>
+    <height>391</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>AccountingMain</string>
+  </property>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>981</width>
+     <height>371</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string>演出编号</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>演出名称</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>演出时间</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>总票数</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>已售票数</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>单价</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>已售金额</string>
+    </property>
+   </column>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

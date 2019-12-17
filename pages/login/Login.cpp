@@ -1,5 +1,6 @@
 #include "Login.h"
 #include <qmessagebox.h>
+#include "AccountingMain.h"
 Login::Login(QWidget* parent)
 	: QWidget(parent) {
 	ui.setupUi(this);
@@ -73,6 +74,22 @@ void Login::clickLoginButton() {
 			QVariantMap result = doucment.toVariant().toMap();
 			if (result["code"].toInt() != 0) {
 				QMessageBox::warning(this, QString::fromLocal8Bit("µÇÂ¼Ê§°Ü"), result["message"].toString());
+			} else {
+				QWidget* window = nullptr;
+				QVariantMap data = result["data"].toMap();
+				switch (data["authority"].toInt()) {
+					case 2:
+						window = new AccountingMain();
+						break;
+					default:
+						break;
+				}
+				if (window) {
+					connect(this, SIGNAL(sendSession(QString)), window, SLOT(receiveSession(QString)));
+					window->show();
+					emit sendSession(data["session"].toString());
+					this->close();
+				}
 			}
 		}
 	}

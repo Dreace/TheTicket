@@ -15,8 +15,11 @@ private:
 	Ui::Login ui;
 	Network network;
 	bool registering = false;
+signals:
+	void sendSession(QString);
 private slots:
 	void clickLoginButton();
 	void clickExitButton();
 	void clickRegisterButton();
+
 };
