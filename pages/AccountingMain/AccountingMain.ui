@@ -1,30 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>ShowList</class>
- <widget class="QWidget" name="ShowList">
+ <class>AccountingMain</class>
+ <widget class="QWidget" name="AccountingMain">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>873</width>
-    <height>367</height>
+    <width>1005</width>
+    <height>391</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>ShowList</string>
+   <string>AccountingMain</string>
   </property>
   <widget class="QTableWidget" name="tableWidget">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>871</width>
-     <height>361</height>
+     <x>10</x>
+     <y>10</y>
+     <width>981</width>
+     <height>371</height>
     </rect>
    </property>
    <property name="editTriggers">
     <set>QAbstractItemView::NoEditTriggers</set>
    </property>
+   <column>
+    <property name="text">
+     <string>演出编号</string>
+    </property>
+   </column>
    <column>
     <property name="text">
      <string>演出名称</string>
@@ -37,17 +42,22 @@
    </column>
    <column>
     <property name="text">
-     <string>剩余票数</string>
+     <string>总票数</string>
     </property>
    </column>
    <column>
     <property name="text">
-     <string>票价</string>
+     <string>已售票数</string>
     </property>
    </column>
    <column>
     <property name="text">
-     <string>预定</string>
+     <string>单价</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>已售金额</string>
     </property>
    </column>
   </widget>

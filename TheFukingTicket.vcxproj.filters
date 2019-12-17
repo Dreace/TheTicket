@@ -34,6 +34,9 @@
     <ClCompile Include="pages\login\Login.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="pages\AccountingMain\AccountingMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="pages\showList\ShowList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -48,6 +51,9 @@
     <QtMoc Include="pages\login\Login.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="pages\AccountingMain\AccountingMain.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
     <QtMoc Include="pages\showList\ShowList.h">
       <Filter>Header Files</Filter>
     </QtMoc>
@@ -57,6 +63,9 @@
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="pages\login\Login.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\AccountingMain\AccountingMain.ui">
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="pages\showList\ShowList.ui">
