@@ -19,7 +19,9 @@ private:
 	Network network;
 	QVariantList resultList;
 public:
-	
+
+signals:
+	void transmit_data(QVariantMap);
 
 private slots:
 	void clickOrderButton();

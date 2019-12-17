@@ -18,13 +18,17 @@ Cforder::Cforder(QWidget *parent)
 	connect(ui.cancelButton, SIGNAL(clicked()), this, SLOT(clickCancelButton()));
 	connect(ui.num, SIGNAL(valueChanged(int)), this, SLOT(setValue(int)));
 	
-	ui.name->setText("test");
-	ui.time->setText("test");
 }
 
 void Cforder::clickCancelButton() {
 	QString quantity = QString::number(ui.num->value());
 	
+}
+
+void Cforder::receive_data(QVariantMap s) {
+	ui.name->setText(s["showName"].toString());
+	ui.time->setText(s["showTimestamp"].toString());
+	showPrice = s["showPrice"].toInt();
 }
 
 void Cforder::clickConfirmButton() {
@@ -34,7 +38,7 @@ void Cforder::clickConfirmButton() {
 void Cforder::setValue(int){
 	int total = 0;
 	int num = ui.num->value();
-	total = num * 5;
+	total = num * showPrice;
 	ui.total->setText(QString::number(total));
 }
 

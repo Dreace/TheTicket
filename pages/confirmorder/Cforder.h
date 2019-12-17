@@ -13,11 +13,14 @@ public:
 
 private:
 	Ui::Cforder ui;
+	int showPrice;
 
 private slots:
 	void clickConfirmButton();
 	void clickCancelButton();
 	void setValue(int);
+
+	void receive_data(QVariantMap s);
 };
 
 

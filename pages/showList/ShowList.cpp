@@ -9,7 +9,7 @@
 #include <qmessagebox.h>
 #include <qvariant.h>
 #include <qdatetime.h>
-
+#include <Cforder.h>
 
 
 ShowList::ShowList(QWidget *parent)
@@ -65,11 +65,12 @@ ShowList::ShowList(QWidget *parent)
 
 void ShowList::clickOrderButton() {
 	
+	Cforder *c = new Cforder();
 	QPushButton *btn = (QPushButton *)sender();
 	QVariantMap s = resultList.at(btn->property("row").toInt()).toMap();
-	/*connect(this, SIGNAL(transmit_data(QVariantMap)), modify_attributes, SLOT(receive_data(QVariantMap)));
-	modify_attributes->show();
-	emit(transmit_data(s));*/
+	connect(this, SIGNAL(transmit_data(QVariantMap)), c, SLOT(receive_data(QVariantMap)));
+	c->show();
+	emit(transmit_data(s));
 }
 
 ShowList::~ShowList()
