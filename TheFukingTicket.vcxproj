@@ -13,12 +13,12 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{B12702AD-ABFB-343A-A199-8E24837244A3}</ProjectGuid>
     <Keyword>QtVS_v301</Keyword>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -67,7 +67,7 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
-      <AdditionalIncludeDirectories>.\pages\main;.\pages\login;.\pages\AccountingMain;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\pages\main;.\pages\login;.\pages\AccountingMain;.\pages\showList;.\pages\confirmorder;.\pages\mainwindow;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -81,7 +81,7 @@
       <DebugInformationFormat />
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
-      <AdditionalIncludeDirectories>.\pages\main;.\pages\login;.\pages\AccountingMain;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\pages\main;.\pages\login;.\pages\AccountingMain;.\pages\confirmorder;.\pages\showList;.\pages\mainwindow;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -92,12 +92,16 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pages\AccountingMain\AccountingMain.cpp" />
+    <ClCompile Include="pages\confirmorder\Cforder.cpp" />
     <ClCompile Include="pages\login\Login.cpp" />
+    <ClCompile Include="pages\showList\ShowList.cpp" />
     <ClCompile Include="utils\network\network.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="pages\AccountingMain\AccountingMain.ui" />
+    <QtUic Include="pages\confirmorder\Cforder.ui" />
     <QtUic Include="pages\login\Login.ui" />
+    <QtUic Include="pages\showList\ShowList.ui" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="utils\network\network.h" />
@@ -107,6 +111,8 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="pages\AccountingMain\AccountingMain.h" />
+    <QtMoc Include="pages\showList\ShowList.h" />
+    <QtMoc Include="pages\confirmorder\Cforder.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
