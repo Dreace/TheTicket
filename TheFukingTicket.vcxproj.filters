@@ -37,6 +37,9 @@
     <ClCompile Include="pages\showList\ShowList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="pages\confirmorder\Cforder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="utils\network\network.h">
@@ -48,12 +51,18 @@
     <QtMoc Include="pages\showList\ShowList.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="pages\confirmorder\Cforder.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="pages\login\Login.ui">
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="pages\showList\ShowList.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\confirmorder\Cforder.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
