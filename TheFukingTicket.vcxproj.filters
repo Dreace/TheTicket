@@ -43,9 +43,32 @@
     <ClCompile Include="pages\confirmorder\Cforder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="pages\operator\ModifyList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\operator\ModifyAttributes\ModifyAttributes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\operator\AddShow\AddShow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="utils\network\network.h">
+    <QtUic Include="pages\login\Login.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\operator\ModifyList.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\operator\ModifyAttributes\ModifyAttributes.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\operator\AddShow\AddShow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="pages\operator\ModifyList.h">
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="pages\login\Login.h">
@@ -74,5 +97,14 @@
     <QtUic Include="pages\confirmorder\Cforder.ui">
       <Filter>Form Files</Filter>
     </QtUic>
+    <QtMoc Include="utils\network\network.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\operator\ModifyAttributes\ModifyAttributes.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\operator\AddShow\AddShow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
 </Project>

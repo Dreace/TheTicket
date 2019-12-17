@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ModifyList</class>
+ <widget class="QWidget" name="ModifyList">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>901</width>
+    <height>481</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ModifyList</string>
+  </property>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>901</width>
+     <height>481</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string>场次编号</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>场次名称</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>场次时间</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>票价</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>总座位</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>剩余座位</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>操作</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>780</x>
+     <y>390</y>
+     <width>71</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>增加场次</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
