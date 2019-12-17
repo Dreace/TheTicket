@@ -1,6 +1,6 @@
 #include "Login.h"
 #include <qmessagebox.h>
-#include "AccountingMain.h"
+#include "pages\AccountingMain\AccountingMain.h"
 #include <ShowList.h>
 Login::Login(QWidget* parent)
 	: QWidget(parent) {
