@@ -18,16 +18,15 @@ private:
 	Ui::ShowList ui;
 	Network network;
 	QVariantList resultList;
-public:
-
+	QString session;
+	void refreshList();
 signals:
 	void transmit_data(QVariantMap);
 
 private slots:
 	void clickOrderButton();
-		
-	
-	
+public slots:
+	void receiveSession(QString);
 };
 
 

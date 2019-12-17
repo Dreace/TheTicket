@@ -22,6 +22,34 @@
      <height>361</height>
     </rect>
    </property>
+   <property name="editTriggers">
+    <set>QAbstractItemView::NoEditTriggers</set>
+   </property>
+   <column>
+    <property name="text">
+     <string>演出名称</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>演出时间</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>剩余票数</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>票价</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>预定</string>
+    </property>
+   </column>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>

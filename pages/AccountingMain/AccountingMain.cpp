@@ -37,7 +37,6 @@ void AccountingMain::refreshList() {
 }
 void AccountingMain::receiveSession(QString session) {
 	this->session = session;
-	//QMessageBox::information(this, session, session);
 	this->refreshList();
 }
 AccountingMain::~AccountingMain() {}
