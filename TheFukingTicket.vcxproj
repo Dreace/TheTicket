@@ -67,7 +67,7 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
-      <AdditionalIncludeDirectories>C:\Qt\Qt5.12.6\5.12.6\msvc2017_64\include;.\pages\main;.\pages;.\pages\confirmorder;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Qt\Qt5.12.6\5.12.6\msvc2017_64\include;.\pages\main;.\pages;.\pages\confirmorder;.\pages\orderdetail;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -81,7 +81,7 @@
       <DebugInformationFormat />
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
-      <AdditionalIncludeDirectories>.\pages\main;.\pages\login;.\pages;.\pages\confirmorder;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\pages\main;.\pages\login;.\pages;.\pages\confirmorder;.\pages\orderdetail;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -93,11 +93,13 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pages\confirmorder\Cforder.cpp" />
     <ClCompile Include="pages\login\Login.cpp" />
+    <ClCompile Include="pages\orderdetail\OrderDetail.cpp" />
     <ClCompile Include="utils\network\network.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="pages\confirmorder\Cforder.ui" />
     <QtUic Include="pages\login\Login.ui" />
+    <QtUic Include="pages\orderdetail\OrderDetail.ui" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="utils\network\network.h" />
@@ -107,6 +109,9 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="pages\confirmorder\Cforder.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="pages\orderdetail\OrderDetail.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
