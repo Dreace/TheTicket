@@ -67,7 +67,7 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
-      <AdditionalIncludeDirectories>.\pages\main;.\pages\login;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\pages\main;.\pages\login;.\pages\operator;.\pages\operator\ModifyAttributes;.\pages\operator\AddShow;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -81,7 +81,7 @@
       <DebugInformationFormat />
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
-      <AdditionalIncludeDirectories>.\pages\main;.\pages\login;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\pages\main;.\pages\login;.\pages\operator;.\pages\operator\ModifyAttributes;.\pages\operator\AddShow;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -92,16 +92,31 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pages\login\Login.cpp" />
+    <ClCompile Include="pages\operator\AddShow\AddShow.cpp" />
+    <ClCompile Include="pages\operator\ModifyAttributes\ModifyAttributes.cpp" />
+    <ClCompile Include="pages\operator\ModifyList.cpp" />
     <ClCompile Include="utils\network\network.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="pages\login\Login.ui" />
+    <QtUic Include="pages\operator\AddShow\AddShow.ui" />
+    <QtUic Include="pages\operator\ModifyAttributes\ModifyAttributes.ui" />
+    <QtUic Include="pages\operator\ModifyList.ui" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="utils\network\network.h" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="pages\login\Login.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="pages\operator\ModifyList.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="pages\operator\ModifyAttributes\ModifyAttributes.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="pages\operator\AddShow\AddShow.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
