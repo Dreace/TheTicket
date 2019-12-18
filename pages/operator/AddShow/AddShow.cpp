@@ -17,7 +17,7 @@ AddShow::AddShow(QWidget* parent, QWidget* parentWindows)
 }
 void AddShow::click_confirm_add_btn() {
 	QUrlQuery params;
-	if (ui.lineEdit->text().length() < 1) {
+	if (ui.lineEdit->text().trimmed().length() < 1) {
 		QMessageBox::warning(this, QString::fromLocal8Bit("错误"), QString::fromLocal8Bit("演出名称不能为空"));
 		return;
 	}
@@ -34,7 +34,7 @@ void AddShow::click_confirm_add_btn() {
 		return;
 	}
 	params.addQueryItem("session", session);
-	params.addQueryItem("show_name", ui.lineEdit->text());
+	params.addQueryItem("show_name", ui.lineEdit->text().trimmed());
 	params.addQueryItem("show_time", QString::number(ui.dateTimeEdit->dateTime().toTime_t()));
 	params.addQueryItem("show_price", ui.lineEdit_2->text());
 	params.addQueryItem("show_seat_total", ui.lineEdit_3->text());
@@ -46,6 +46,7 @@ void AddShow::click_confirm_add_btn() {
 	if (result["code"].toInt() == 0) {
 		QMessageBox::warning(this, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("添加成功"));
 		emit(refresh_list());
+		this->close();
 	} else {
 		QMessageBox::warning(this, QString::fromLocal8Bit("错误"), result["message"].toString());
 	}
