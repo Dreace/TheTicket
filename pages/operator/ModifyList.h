@@ -1,10 +1,11 @@
 #pragma once
 
 #include <QWidget>
+#include <qmainwindow.h>
 #include "ui_ModifyList.h"
 #include"utils/network/network.h"
 #include <qpushbutton.h>
-class ModifyList : public QWidget {
+class ModifyList : public QMainWindow {
 	Q_OBJECT
 
 public:
@@ -16,7 +17,8 @@ signals:
 private slots:
 	void click_alter_btn();
 	void click_delete_btn();
-	void click_add_btn();
+	void logout();
+	void addShow();
 public slots:
 	void receiveSession(QString);
 	void refresh();

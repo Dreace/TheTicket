@@ -52,6 +52,9 @@
     <ClCompile Include="pages\operator\AddShow\AddShow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="pages\showList\MyOrder\MyOrder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="pages\login\Login.ui">
@@ -64,6 +67,9 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="pages\operator\AddShow\AddShow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\showList\MyOrder\MyOrder.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
@@ -81,6 +87,9 @@
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="pages\confirmorder\Cforder.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\showList\MyOrder\MyOrder.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>

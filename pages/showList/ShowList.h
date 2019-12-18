@@ -1,13 +1,13 @@
 #pragma once
 
-#include <QWidget>
+#include <qmainwindow.h>
 #include "ui_ShowList.h"
 #include <qstringlistmodel.h>
 #include <qstandarditemmodel.h>
 #include <utils/network/network.h>
 
 
-class ShowList : public QWidget
+class ShowList : public QMainWindow
 {
 	Q_OBJECT
 
@@ -22,9 +22,11 @@ private:
 	void refreshList();
 signals:
 	void transmit_data(QVariantMap,QString);
-
+	void sendSession(QString);
 private slots:
 	void clickOrderButton();
+	void logout();
+	void showMyOrder();
 public slots:
 	void refresh();
 	void receiveSession(QString);

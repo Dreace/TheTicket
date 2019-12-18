@@ -3,10 +3,12 @@
 #include<qlayout.h>
 #include"pages/operator/AddShow/AddShow.h"
 #include "pages/operator/ModifyAttributes/ModifyAttributes.h"
+#include <Login.h>
 ModifyList::ModifyList(QWidget* parent)
-	: QWidget(parent) {
+	: QMainWindow(parent) {
 	ui.setupUi(this);
-	connect(ui.pushButton, SIGNAL(clicked()), this, SLOT(click_add_btn()));
+	connect(ui.action, SIGNAL(triggered()), this, SLOT(addShow()));
+	connect(ui.action_2, SIGNAL(triggered()), this, SLOT(logout()));
 	Refresh();
 }
 void ModifyList::Refresh() {
@@ -24,7 +26,7 @@ void ModifyList::Refresh() {
 			QVariantMap s = a.toMap();
 			ui.tableWidget->setItem(cnt, 0, new QTableWidgetItem(s["showID"].toString().left(5)));
 			ui.tableWidget->setItem(cnt, 1, new QTableWidgetItem(s["showName"].toString()));
-			ui.tableWidget->setItem(cnt, 2, new QTableWidgetItem(QDateTime::fromTime_t(s["showTimestamp"].toInt()).toString(QString::fromLocal8Bit("yyyy年MM月dd hh:mm"))));
+			ui.tableWidget->setItem(cnt, 2, new QTableWidgetItem(QDateTime::fromTime_t(s["showTimestamp"].toInt()).toString(QString::fromLocal8Bit("yyyy年MM月dd日 hh:mm"))));
 			ui.tableWidget->setItem(cnt, 3, new QTableWidgetItem(s["showPrice"].toString()));
 			ui.tableWidget->setItem(cnt, 4, new QTableWidgetItem(s["showSeats"].toString()));
 			ui.tableWidget->setItem(cnt, 5, new QTableWidgetItem(s["showSeatsAvailable"].toString()));
@@ -80,7 +82,12 @@ void ModifyList::click_delete_btn() {
 void ModifyList::receiveSession(QString session) {
 	this->session = session;
 }
-void ModifyList::click_add_btn() {
+void ModifyList::logout() {
+	Login* w = new Login();
+	w->show();
+	this->close();
+}
+void ModifyList::addShow() {
 	AddShow* add_show = new AddShow(nullptr, this);
 	add_show->show();
 	connect(this, SIGNAL(sendSession(QString)), add_show, SLOT(receiveSession(QString)));

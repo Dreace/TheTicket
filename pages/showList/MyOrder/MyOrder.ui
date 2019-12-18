@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MyOrder</class>
+ <widget class="QWidget" name="MyOrder">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>921</width>
+    <height>503</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MyOrder</string>
+  </property>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>891</width>
+     <height>481</height>
+    </rect>
+   </property>
+   <property name="editTriggers">
+    <set>QAbstractItemView::NoEditTriggers</set>
+   </property>
+   <column>
+    <property name="text">
+     <string>订单号</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>下单时间</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>票数</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>座位</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>演出名称</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>演出时间</string>
+    </property>
+   </column>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

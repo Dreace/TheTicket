@@ -1,10 +1,11 @@
 #pragma once
 
 #include <QWidget>
+#include <qmainwindow.h>
 #include "ui_AccountingMain.h"
 #include "utils/network/network.h"
 
-class AccountingMain : public QWidget
+class AccountingMain : public QMainWindow
 {
 	Q_OBJECT
 
@@ -19,4 +20,5 @@ private:
 	void refreshList();
 public slots:
 	void receiveSession(QString);
+	void logout();
 };

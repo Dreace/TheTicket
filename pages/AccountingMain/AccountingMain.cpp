@@ -2,9 +2,11 @@
 #include <qmessagebox.h>
 #include <qvariant.h>
 #include <qtablewidget.h>
+#include "Login.h"
 AccountingMain::AccountingMain(QWidget* parent)
-	: QWidget(parent) {
+	: QMainWindow(parent) {
 	ui.setupUi(this);
+	connect(ui.action, SIGNAL(triggered()), this, SLOT(logout()));
 }
 void AccountingMain::refreshList() {
 	QJsonDocument doucment = network.get(QString("GetShow/All"));
@@ -21,7 +23,7 @@ void AccountingMain::refreshList() {
 				int sold_seat = item_map["showSeats"].toInt() - item_map["showSeatsAvailable"].toInt();
 				double price = item_map["showPrice"].toDouble();
 				QDateTime show_time = QDateTime::fromTime_t(item_map["showTimestamp"].toInt());
-				QString show_time_str = show_time.toString(QString::fromLocal8Bit("yyyy年MM月dd hh:mm"));
+				QString show_time_str = show_time.toString(QString::fromLocal8Bit("yyyy年MM月dd日 hh:mm"));
 				ui.tableWidget->setItem(cnt, 0, new QTableWidgetItem(item_map["showID"].toString().mid(0, 5)));
 				ui.tableWidget->setItem(cnt, 1, new QTableWidgetItem(item_map["showName"].toString()));
 				ui.tableWidget->setItem(cnt, 2, new QTableWidgetItem(show_time_str));
@@ -38,5 +40,10 @@ void AccountingMain::refreshList() {
 void AccountingMain::receiveSession(QString session) {
 	this->session = session;
 	this->refreshList();
+}
+void AccountingMain::logout() {
+	Login* w = new Login();
+	w->show();
+	this->close();
 }
 AccountingMain::~AccountingMain() {}

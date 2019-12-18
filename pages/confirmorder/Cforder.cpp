@@ -28,7 +28,7 @@ void Cforder::receive_data(QVariantMap s, QString session) {
 	this->session = session;
 	ui.name->setText(s["showName"].toString());
 	QDateTime show_time = QDateTime::fromTime_t(s["showTimestamp"].toInt());
-	QString show_time_str = show_time.toString(QString::fromLocal8Bit("yyyy年MM月dd hh:mm"));
+	QString show_time_str = show_time.toString(QString::fromLocal8Bit("yyyy年MM月dd日 hh:mm"));
 	ui.time->setText(show_time_str);
 	showPrice = s["showPrice"].toInt();
 	showid = s["showID"].toString();

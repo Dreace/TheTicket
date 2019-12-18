@@ -1,56 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>ShowList</class>
- <widget class="QWidget" name="ShowList">
+ <widget class="QMainWindow" name="ShowList">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>873</width>
-    <height>367</height>
+    <width>847</width>
+    <height>513</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>ShowList</string>
   </property>
-  <widget class="QTableWidget" name="tableWidget">
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>841</width>
+      <height>481</height>
+     </rect>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
+    <column>
+     <property name="text">
+      <string>演出名称</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>演出时间</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>剩余票数</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>票价</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>预定</string>
+     </property>
+    </column>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>871</width>
-     <height>361</height>
+     <width>847</width>
+     <height>26</height>
     </rect>
    </property>
-   <property name="editTriggers">
-    <set>QAbstractItemView::NoEditTriggers</set>
-   </property>
-   <column>
-    <property name="text">
-     <string>演出名称</string>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>菜单</string>
     </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>演出时间</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>剩余票数</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>票价</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>预定</string>
-    </property>
-   </column>
+    <addaction name="action"/>
+    <addaction name="action_2"/>
+   </widget>
+   <addaction name="menu"/>
   </widget>
+  <action name="action">
+   <property name="text">
+    <string>查看我的订单</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>注销</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>

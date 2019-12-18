@@ -18,11 +18,11 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <PropertyGroup Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">
@@ -67,7 +67,7 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
-      <AdditionalIncludeDirectories>.\pages\main;.\pages\login;.\pages\AccountingMain;.\pages\showList;.\pages\confirmorder;.\pages\mainwindow;.\pages\operator;.\pages\operator\ModifyAttributes;.\pages\operator\AddShow;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\pages\main;.\pages\login;.\pages\AccountingMain;.\pages\showList;.\pages\confirmorder;.\pages\mainwindow;.\pages\operator;.\pages\operator\ModifyAttributes;.\pages\operator\AddShow;.\pages\showList\MyOrder;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -81,7 +81,7 @@
       <DebugInformationFormat />
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
-      <AdditionalIncludeDirectories>.\pages\main;.\pages\login;.\pages\AccountingMain;.\pages\confirmorder;.\pages\showList;.\pages\mainwindow;.\pages\operator;.\pages\operator\ModifyAttributes;.\pages\operator\AddShow;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\pages\main;.\pages\login;.\pages\AccountingMain;.\pages\confirmorder;.\pages\showList;.\pages\mainwindow;.\pages\operator;.\pages\operator\ModifyAttributes;.\pages\operator\AddShow;.\pages\showList\MyOrder;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -94,6 +94,7 @@
     <ClCompile Include="pages\AccountingMain\AccountingMain.cpp" />
     <ClCompile Include="pages\confirmorder\Cforder.cpp" />
     <ClCompile Include="pages\login\Login.cpp" />
+    <ClCompile Include="pages\showList\MyOrder\MyOrder.cpp" />
     <ClCompile Include="pages\showList\ShowList.cpp" />
     <ClCompile Include="pages\operator\AddShow\AddShow.cpp" />
     <ClCompile Include="pages\operator\ModifyAttributes\ModifyAttributes.cpp" />
@@ -104,6 +105,7 @@
     <QtUic Include="pages\AccountingMain\AccountingMain.ui" />
     <QtUic Include="pages\confirmorder\Cforder.ui" />
     <QtUic Include="pages\login\Login.ui" />
+    <QtUic Include="pages\showList\MyOrder\MyOrder.ui" />
     <QtUic Include="pages\showList\ShowList.ui" />
     <QtUic Include="pages\operator\AddShow\AddShow.ui" />
     <QtUic Include="pages\operator\ModifyAttributes\ModifyAttributes.ui" />
@@ -126,6 +128,9 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="pages\operator\AddShow\AddShow.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="pages\showList\MyOrder\MyOrder.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
