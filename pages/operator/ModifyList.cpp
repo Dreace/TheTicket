@@ -25,8 +25,8 @@ void ModifyList::Refresh() {
 			ui.tableWidget->setItem(cnt, 0, new QTableWidgetItem(s["showID"].toString().left(5)));
 			ui.tableWidget->setItem(cnt, 1, new QTableWidgetItem(s["showName"].toString()));
 			ui.tableWidget->setItem(cnt, 2, new QTableWidgetItem(QDateTime::fromTime_t(s["showTimestamp"].toInt()).toString(QString::fromLocal8Bit("yyyyÄêMMÔÂdd hh:mm"))));
-			ui.tableWidget->setItem(cnt, 3, new QTableWidgetItem(s["showSeats"].toString()));
-			ui.tableWidget->setItem(cnt, 4, new QTableWidgetItem(s["showPrice"].toString()));
+			ui.tableWidget->setItem(cnt, 3, new QTableWidgetItem(s["showPrice"].toString()));
+			ui.tableWidget->setItem(cnt, 4, new QTableWidgetItem(s["showSeats"].toString()));
 			ui.tableWidget->setItem(cnt, 5, new QTableWidgetItem(s["showSeatsAvailable"].toString()));
 			QWidget* itemWidget = new QWidget();
 			QHBoxLayout* itemHLayout = new QHBoxLayout(itemWidget);
