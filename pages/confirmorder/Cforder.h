@@ -3,12 +3,11 @@
 #include <QWidget>
 #include "ui_Cforder.h"
 #include <utils/network/network.h>
-class Cforder : public QWidget
-{
+class Cforder : public QWidget {
 	Q_OBJECT
 
 public:
-	Cforder(QWidget *parent = Q_NULLPTR);
+	Cforder(QWidget* parent, QWidget* realParent);
 	~Cforder();
 
 private:
@@ -17,13 +16,11 @@ private:
 	int showPrice;
 	QString showid;
 	QString session;
-
+signals:
+	void refresh_list();
 private slots:
 	void clickConfirmButton();
 	void clickCancelButton();
 	void setValue(int);
-
-	void receive_data(QVariantMap s);
+	void receive_data(QVariantMap s, QString);
 };
-
-

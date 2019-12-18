@@ -21,11 +21,12 @@ private:
 	QString session;
 	void refreshList();
 signals:
-	void transmit_data(QVariantMap);
+	void transmit_data(QVariantMap,QString);
 
 private slots:
 	void clickOrderButton();
 public slots:
+	void refresh();
 	void receiveSession(QString);
 };
 

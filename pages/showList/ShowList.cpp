@@ -16,12 +16,12 @@ ShowList::ShowList(QWidget *parent)
 }
 
 void ShowList::clickOrderButton() {
-	Cforder *c = new Cforder();
+	Cforder *c = new Cforder(nullptr,this);
 	QPushButton *btn = (QPushButton *)sender();
 	QVariantMap s = resultList.at(btn->property("row").toInt()).toMap();
-	connect(this, SIGNAL(transmit_data(QVariantMap)), c, SLOT(receive_data(QVariantMap)));
+	connect(this, SIGNAL(transmit_data(QVariantMap, QString)), c, SLOT(receive_data(QVariantMap, QString)));
 	c->show();
-	emit(transmit_data(s));
+	emit(transmit_data(s,this->session));
 }
 void ShowList::refreshList() {
 	QJsonDocument doucment = network.get(QString("GetShow"));
@@ -49,8 +49,6 @@ void ShowList::refreshList() {
 		ui.tableWidget->setCellWidget(cnt, 4, buy_btn);
 		connect(buy_btn, SIGNAL(clicked()), this, SLOT(clickOrderButton()));
 		buy_btn->setProperty("row", cnt);//设置每行按钮的属性
-		/*buy_btn->setFixedSize(55, 30);*/
-		connect(buy_btn, SIGNAL(clicked()), this, SLOT(clickOrderButton()));
 		++cnt;
 	}
 	ui.tableWidget->resizeColumnToContents(1);
@@ -58,6 +56,9 @@ void ShowList::refreshList() {
 
 void ShowList::receiveSession(QString session) {
 	this->session = session;
+	this->refreshList();
+}
+void ShowList::refresh() {
 	this->refreshList();
 }
 ShowList::~ShowList()

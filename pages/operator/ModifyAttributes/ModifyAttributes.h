@@ -3,12 +3,11 @@
 #include <QWidget>
 #include "ui_ModifyAttributes.h"
 #include "utils/network/network.h"
-class ModifyAttributes : public QWidget
-{
+class ModifyAttributes : public QWidget {
 	Q_OBJECT
 
 public:
-	ModifyAttributes(QWidget *parent , QWidget*);
+	ModifyAttributes(QWidget* parent, QWidget*);
 	~ModifyAttributes();
 private:
 	Ui::ModifyAttributes ui;
@@ -21,5 +20,5 @@ private slots:
 	void click_cancel_change_btn();
 	void click_confirm_change_btn();
 public slots:
-	void receive_data(QVariantMap,QString);
+	void receive_data(QVariantMap, QString);
 };
