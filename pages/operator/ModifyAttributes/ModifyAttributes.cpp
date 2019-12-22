@@ -29,6 +29,10 @@ void ModifyAttributes::click_confirm_change_btn() {//从输入框获取修改过后的值
 		QMessageBox::warning(this, QString::fromLocal8Bit("错误"), QString::fromLocal8Bit("演出名称不能为空"));
 		return;
 	}
+	if (ui.lineEdit_4->text().trimmed().length() < 1) {
+		QMessageBox::warning(this, QString::fromLocal8Bit("错误"), QString::fromLocal8Bit("票价不能为空"));
+		return;
+	}
 	QUrlQuery params;
 	params.addQueryItem("session", session);
 	params.addQueryItem("show_id", v["showID"].toString());
